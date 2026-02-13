@@ -81,7 +81,7 @@ st.header("Together – Made for Each Other 💑")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.image(img1, caption="My Heart ❤️", use_column_width=True)
+    st.image(img1, caption="Your Heart ❤️", use_column_width=True)
 
 with col2:
     st.image(img2, caption="My Happiness 💕", use_column_width=True)
