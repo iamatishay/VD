@@ -1,176 +1,212 @@
 import streamlit as st
 import random
 
-# Page config
-st.set_page_config(page_title="Romantic Surprise!", page_icon="💕", layout="wide")
+# ---------------------------------------------------
+# PAGE CONFIG
+# ---------------------------------------------------
+st.set_page_config(page_title="My Forever Love 💖", page_icon="🌹", layout="wide")
 
-# Custom CSS
+# ---------------------------------------------------
+# CUSTOM CSS (Romantic Indian Theme)
+# ---------------------------------------------------
 st.markdown("""
 <style>
 body {
-    background-color: #ffe6f2;
+    background: linear-gradient(to right, #ffe6f0, #fff0f5);
 }
 .stButton>button {
-    background-color: #ff4b8b;
+    background-color: #e60073;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     height: 3em;
     width: 100%;
+    font-weight: bold;
 }
 h1, h2, h3 {
-    color: #d63384;
+    color: #b30059;
+    text-align: center;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# Google Drive Direct Image Links
+# ---------------------------------------------------
+# IMAGES (Google Drive Thumbnail Links)
+# ---------------------------------------------------
 img1 = "https://drive.google.com/thumbnail?id=1EXBDxIo0M2XgeN6M9y0-GJ-jB4J-Rzlo&sz=w1000"
 img2 = "https://drive.google.com/thumbnail?id=1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV&sz=w1000"
 img3 = "https://drive.google.com/thumbnail?id=1Q8Y33KI3OPMBlsJ2x8a-g1Ws80b_ya_q&sz=w1000"
-img4 = "https://drive.google.com/uc?export=view&id=13vhRNquaHtuq5WaBRyY3LOXUpXRNopRN"
-img5 = "https://drive.google.com/uc?export=view&id=1yumhZ2vu5dxg-Ec_Qdz6AMZ0iZywEiwm"
-img6 = "https://drive.google.com/uc?export=view&id=1YKptjhRLtMAmip5Nk5GNx4MjnbJ-Khl0"
 
-# Title
-st.title("💖 A Funny & Romantic Surprise for My Love! 💖")
-st.subheader("Because you're the cheese to my macaroni! 🧀🍝")
+# ---------------------------------------------------
+# TITLE
+# ---------------------------------------------------
+st.title("🌹 Ek Pyari Si Love Story 💖")
+st.subheader("Tum meri zindagi ka sabse khoobsurat hissa ho ✨")
 
-# Section 1: Images
-st.header("Our Cute Faces 😍")
+# ---------------------------------------------------
+# PHOTOS SECTION
+# ---------------------------------------------------
+st.header("Hum Dono – Made For Each Other 💑")
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.image(img1, caption="That's me, your goofy partner!", use_column_width=True)
+    st.image(img1, caption="Mera Dil ❤️", use_column_width=True)
 
 with col2:
-    st.image(img2, caption="And this is my queen!", use_column_width=True)
+    st.image(img2, caption="Meri Jaan 💕", use_column_width=True)
 
 with col3:
-    st.image(img3, caption="Together, we're unstoppable (and cute)!", use_column_width=True)
+    st.image(img3, caption="Hum – Ek Perfect Jodi 💞", use_column_width=True)
 
-# Section 2: Slideshow
-st.header("Memory Lane Slideshow 📸")
-images = [img3, img4, img5, img6]
-captions = [
-    "That time we couldn't stop laughing ❤️",
-    "Our cutest selfie ever 😍",
-    "Making memories together 💕",
-    "Forever my favorite person 💖"
+# ---------------------------------------------------
+# SHAYARI SECTION
+# ---------------------------------------------------
+st.header("Dil Se Shayari 🌙")
+
+shayari_list = [
+    "Tere bina jeena mushkil hai, tu meri aadat ban chuki hai ❤️",
+    "Teri muskaan meri duniya hai 💕",
+    "Chaand bhi sharma jaaye, itni khoobsurat ho tum 🌙",
+    "Har subah tera naam lene se shuru ho 💖",
+    "Tum meri zindagi ka woh hissa ho jise main kabhi khona nahi chahta 🌹"
 ]
 
-if "slide_index" not in st.session_state:
-    st.session_state.slide_index = 0
+if st.button("Sunao Pyari Si Shayari 💌"):
+    st.success(random.choice(shayari_list))
 
-col1, col2, col3 = st.columns([1, 2, 1])
+# ---------------------------------------------------
+# RAPID FIRE ROUND
+# ---------------------------------------------------
+st.header("Rapid Fire – Jaldi Jaldi Answer Do 😂🔥")
 
-with col1:
-    if st.button("⬅ Previous"):
-        st.session_state.slide_index = (st.session_state.slide_index - 1) % len(images)
-
-with col2:
-    st.image(images[st.session_state.slide_index],
-             caption=captions[st.session_state.slide_index],
-             use_column_width=True)
-
-with col3:
-    if st.button("Next ➡"):
-        st.session_state.slide_index = (st.session_state.slide_index + 1) % len(images)
-
-# Section 3: Jokes
-st.header("Jokes to Make You Giggle 😂")
-jokes = [
-    "Why did the scarecrow win an award? Because he was outstanding in his field! (Just like you in my heart.)",
-    "What do you call fake spaghetti? An impasta! (But our love is 100% real.)",
-    "Why don't skeletons fight each other? They don't have the guts! (But I have the guts to love you forever.)",
-    "Why did the bicycle fall over? It was two-tired! (But I'm never tired of you.)",
-    "If beauty were time, you'd be eternity."
+rapid_questions = [
+    "Main zyada drama karta hoon ya tum? 😜",
+    "Hum dono mein zyada emotional kaun hai? 🥺",
+    "Pehle sorry kaun bolta hai? 😏",
+    "Zyada khana kaun khaata hai? 🍕",
+    "Phone zyada kaun use karta hai? 📱"
 ]
 
-user_joke = st.text_input("Add your own joke 💌")
+if st.button("Start Rapid Fire 💥"):
+    for q in rapid_questions:
+        st.write("👉", q)
 
-if user_joke:
-    jokes.append(user_joke)
+# ---------------------------------------------------
+# LOVE COMPATIBILITY CALCULATOR
+# ---------------------------------------------------
+st.header("Love Compatibility Calculator 💘")
 
-if st.button("Tell Me a Joke!"):
-    st.success(random.choice(jokes))
+name1 = st.text_input("Tumhara Naam 💖")
+name2 = st.text_input("Mera Naam 💕")
 
-# Section 4: Romantic Quiz
-st.header("How Well Do You Know Me? 💑")
+if st.button("Check Love % 💞"):
+    if name1 and name2:
+        love_score = random.randint(85, 100)
+        st.success(f"{name1} ❤️ {name2} = {love_score}% Perfect Match 😍🔥")
+    else:
+        st.warning("Naam toh likho jaan 😜")
 
-questions = {
-    "What's my favorite color?": ["Blue", "Red", "Pink", "Green"],
-    "How many times have I said 'I love you' today?": ["Once", "Twice", "A million", "Not enough"],
-    "What's my comfort food?": ["Pizza", "Ice cream", "Chocolate", "All of the above"],
-}
+# ---------------------------------------------------
+# TRUTH OR DARE
+# ---------------------------------------------------
+st.header("Truth or Dare – Couple Edition 🎲")
 
-answers = ["Pink", "Not enough", "All of the above"]
-
-score = 0
-for i, (q, opts) in enumerate(questions.items()):
-    ans = st.radio(q, opts, key=i)
-    if ans == answers[i]:
-        score += 1
-
-if st.button("Check Score 💖"):
-    st.success(f"You got {score}/{len(questions)} right! You're my perfect match 😘")
-
-# Section 5: Timeline
-st.header("Our Love Timeline 🕰️")
-
-timeline = [
-    "First Date: That awkward but magical first meeting.",
-    "First Selfie Together 📸",
-    "First Big Laugh Together 😂",
-    "Today: Still crazy about you 💕"
+truths = [
+    "Mujh mein sabse cute kya lagta hai? 😌",
+    "Tumhe kab laga ki tum mujhse pyaar karte ho? 💖",
+    "Meri kaunsi aadat irritate karti hai? 😜"
 ]
 
-for i, memory in enumerate(timeline, 1):
-    st.write(f"**{i}.** {memory}")
-
-# Section 6: Compliments Generator
-st.header("Compliments Just for You 🌟")
-
-compliments = [
-    "You're more beautiful than a sunset.",
-    "Your smile lights up my darkest days.",
-    "You're my favorite notification.",
-    "You're the reason I believe in love.",
-    "If perfection had a face, it would look like you."
+dares = [
+    "Mujhe ek pyara sa compliment do 💕",
+    "Abhi ke abhi 'I Love You' 5 baar bolo 😍",
+    "Mujhe ek cute nickname do 😏"
 ]
 
-if st.button("Give Me a Compliment 💋"):
-    st.success(random.choice(compliments))
+choice = st.radio("Choose:", ["Truth 🤭", "Dare 😈"])
 
-# Section 7: Date Planner
-st.header("Let's Plan a Cute Date! 📅")
+if st.button("Play 🎉"):
+    if choice == "Truth 🤭":
+        st.info(random.choice(truths))
+    else:
+        st.warning(random.choice(dares))
 
-date_ideas = [
-    "Picnic in the park 🌳",
-    "Movie marathon night 🎬",
-    "Late night ice cream run 🍦",
-    "Stargazing together ✨"
+# ---------------------------------------------------
+# WHO IS MORE GAME
+# ---------------------------------------------------
+st.header("Who Is More? 😏💞")
+
+who_questions = [
+    "Zyada possessive kaun hai? 👀",
+    "Zyada romantic kaun hai? 🌹",
+    "Zyada pagal kaun hai? 😂",
+    "Zyada pyaar kaun karta hai? 💖"
 ]
 
-chosen_date = st.selectbox("Pick a date idea:", date_ideas)
+for q in who_questions:
+    st.radio(q, ["Main 😎", "Tum 😘", "Dono 💕"])
 
-if st.button("Let's Do It 💕"):
-    st.success(f"For '{chosen_date}', we'll need snacks, laughter, and lots of hugs 🤗")
+# ---------------------------------------------------
+# SPIN THE LOVE WHEEL
+# ---------------------------------------------------
+st.header("Spin The Love Wheel 🎡💖")
 
-# Section 8: Love Letter
-st.header("A Letter from the Heart 💌")
+wheel_options = [
+    "1 Hug 🤗",
+    "1 Kiss 💋",
+    "Movie Night 🎬",
+    "Ice Cream Date 🍦",
+    "Long Drive 🚗",
+    "10 Compliments 😍"
+]
+
+if st.button("Spin 💫"):
+    result = random.choice(wheel_options)
+    st.success(f"Wheel Says: {result}")
+
+# ---------------------------------------------------
+# SECRET MESSAGE
+# ---------------------------------------------------
+st.header("Secret Love Message 🔐")
+
+secret_code = st.text_input("Enter Secret Code 💌")
+
+if secret_code == "iloveyou":
+    st.success("Tum meri zindagi ka sabse khoobsurat hissa ho ❤️🌹")
+elif secret_code != "":
+    st.error("Galat password 😜 Try again!")
+
+# ---------------------------------------------------
+# BOLLYWOOD SURPRISE
+# ---------------------------------------------------
+st.header("Bollywood Love Mode 🎬")
+
+if st.button("Click for Surprise 💃"):
+    st.balloons()
+    st.success("Agar tum saath ho... toh zindagi perfect hai ❤️")
+
+# ---------------------------------------------------
+# LOVE LETTER
+# ---------------------------------------------------
+st.header("Dil Se Likha Hua Khat 💌")
 
 st.write("""
-Dear My Love,
+Meri Pyari Jaan,
 
-You make my heart smile in ways I never thought possible.  
-Every moment with you feels like magic.  
+Jab se tum meri zindagi mein aayi ho, sab kuch badal gaya hai.  
+Har din ek nayi khushi lekar aata hai, kyunki tum mere saath ho.
 
-You're my happiness, my peace, and my favorite person in the world.  
-I promise to annoy you forever — but with love.  
+Tum sirf meri girlfriend nahi ho, tum meri best friend ho,  
+meri dua ho, meri taqat ho.
 
-Forever yours ❤️  
+Main har janam mein tumhe hi chahunga.  
+Chahe duniya badal jaaye, mera pyaar kabhi kam nahi hoga.
+
+Hamesha tumhara ❤️
 """)
 
-# Footer
+# ---------------------------------------------------
+# FOOTER
+# ---------------------------------------------------
 st.markdown("---")
-st.write("Made with ❤️ just for you. Refresh anytime for more smiles 💕")
+st.write("Made with ❤️ in full Bollywood style 🇮🇳🌹")
