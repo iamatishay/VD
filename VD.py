@@ -191,18 +191,20 @@ if st.button("Click for Surprise 💃"):
 st.header("Dil Se Likha Hua Khat 💌")
 
 st.write("""
-Meri Pyari Jaan,
+My Love,
 
-Jab se tum meri zindagi mein aayi ho, sab kuch badal gaya hai.  
-Har din ek nayi khushi lekar aata hai, kyunki tum mere saath ho.
+From the moment you walked into my life, everything changed in the most beautiful way. The world feels softer, brighter, and more meaningful because you are in it. Your smile calms my storms, your voice feels like home, and your presence gives me a peace I never knew I was searching for.
 
-Tum sirf meri girlfriend nahi ho, tum meri best friend ho,  
-meri dua ho, meri taqat ho.
+Sometimes I just look at you quietly and thank God for sending an angel into my life. Tum meri strength ho, meri sukoon ho, meri khushi ho… aur meri har dua ka sabse khoobsurat jawab ho.
 
-Main har janam mein tumhe hi chahunga.  
-Chahe duniya badal jaaye, mera pyaar kabhi kam nahi hoga.
+Do you know why I call you Firdaus? Because Firdaus means paradise  and that is exactly what you are to me. When you came into my life, it felt like heaven touched my world. Being with you feels like peace after chaos, like light after darkness, like a beautiful garden blooming inside my heart. You didn’t just enter my life… you transformed it into something pure and magical.
 
-Hamesha tumhara ❤️
+You are not just my love you are my safe place, my biggest blessing, and the most beautiful chapter of my story. With you, I have found a love that feels gentle yet powerful, simple yet extraordinary.
+
+No matter where life takes us, I promise to always respect you, protect your heart, stand beside you in every storm, and love you more deeply with every passing day. I choose you today, tomorrow, and for all the tomorrows that come after.
+
+Forever yours,
+With all my love ❤️
 """)
 
 # ---------------------------------------------------
