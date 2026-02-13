@@ -28,11 +28,11 @@ st.subheader("Because you're the cheese to my macaroni! 🧀🍝")
 st.header("Our Cute Faces 😍")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("your_photo.jpg", caption="That's me, your goofy partner!", width=200)  # Replace with your image path
+    st.image("https://www.facebook.com/ValentinesDayImagess/", caption="That's me, your goofy partner!", width=200)  # Replace with your image path
 with col2:
-    st.image("girlfriend_photo.jpg", caption="And this is my queen!", width=200)  # Replace with girlfriend's image
+    st.image("https://www.facebook.com/ValentinesDayImagess/", caption="And this is my queen!", width=200)  # Replace with girlfriend's image
 with col3:
-    st.image("couple_photo.jpg", caption="Together, we're unstoppable (and cute)!", width=200)  # Replace with couple photo
+    st.image("https://www.facebook.com/ValentinesDayImagess/", caption="Together, we're unstoppable (and cute)!", width=200)  # Replace with couple photo
 
 # Section 2: Photo Slideshow
 st.header("Memory Lane Slideshow 📸")
