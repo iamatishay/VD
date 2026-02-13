@@ -228,3 +228,38 @@ HONEYYYYY
 # FOOTER
 # ---------------------------------------------------
 st.markdown("---")
+
+# ---------------------------------------------------
+# QUEEN FIRDAUS ALBUM
+# ---------------------------------------------------
+st.markdown("---")
+st.header("The Most Beautiful Girl in My World 👑💖")
+
+st.markdown("""
+<div style="text-align:center; font-size:20px; color:#800040; padding-bottom:20px;">
+Every picture of yours feels like a piece of paradise… my Firdaus 🌸
+</div>
+""", unsafe_allow_html=True)
+
+album_images = [
+    "https://drive.google.com/thumbnail?id=1HHnbH4nhVcXIXEAUIcpRmHOdzmKf0q7K&sz=w1000",
+    "https://drive.google.com/thumbnail?id=1_XnU4QfSdQv_wFQ3eUsyGkMpqlibY4VV&sz=w1000",
+    "https://drive.google.com/thumbnail?id=1vDLstXDv_8jX6nept4z2LmV4EO0-_qyw&sz=w1000",
+    "https://drive.google.com/thumbnail?id=1I3XrcmPMqPDGGGs-KjgMu3fAgbPdYKql&sz=w1000",
+    "https://drive.google.com/thumbnail?id=1R1_Rxic8xF-Rs3-LNwZ9FWev76omT4sJ&sz=w1000",
+    "https://drive.google.com/thumbnail?id=1AtpWaorxXbq0s0z44n78PY-SY5o7trQj&sz=w1000"
+]
+
+
+cols = st.columns(3)
+
+for index, img in enumerate(album_images):
+    with cols[index % 3]:
+        st.image(img, use_column_width=True)
+
+st.markdown("""
+<div style="text-align:center; font-size:18px; color:#b30059; padding-top:25px;">
+No matter how many pictures I see… I still can’t stop staring at you ❤️
+</div>
+""", unsafe_allow_html=True)
+
