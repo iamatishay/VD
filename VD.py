@@ -39,10 +39,35 @@ h1, h2, h3 {
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# TITLE
+# VALENTINE SPECIAL TITLE
 # ---------------------------------------------------
-st.title("🌹 A Beautiful Love Story 💖")
-st.subheader("You are the most special part of my life ✨")
+
+st.markdown("""
+<div style="text-align:center; padding-top:20px;">
+    <h4 style="color:#b30059;">
+        💌 A tiny message before you scroll...
+    </h4>
+    <p style="font-size:18px; color:#660033;">
+        From the moment you walked into my life, everything changed.
+        This little page is just a reminder of how deeply I love you.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="text-align:center; padding:30px;">
+    <h1 style="font-size:70px; color:#e60073;">
+        💖 Happy Valentine's Day 💖
+    </h1>
+    <h2 style="font-size:45px; color:#b30059;">
+        Our Beautiful Love Story 🌹
+    </h2>
+    <p style="font-size:28px; color:#800040;">
+        You are my today, my tomorrow, and my forever. ✨
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
 
 # ---------------------------------------------------
 # IMAGES
@@ -203,4 +228,3 @@ HONEYYYYY
 # FOOTER
 # ---------------------------------------------------
 st.markdown("---")
-st.write("Made with love and full Bollywood feelings 🇮🇳🌹")
