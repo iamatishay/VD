@@ -28,7 +28,7 @@ st.subheader("Because you're the cheese to my macaroni! 🧀🍝")
 st.header("Our Cute Faces 😍")
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("https://www.facebook.com/ValentinesDayImagess/", caption="That's me, your goofy partner!", width=200)  # Replace with your image path
+    st.image("https://drive.google.com/file/d/1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV/view?usp=drive_link", caption="That's me, your goofy partner!", width=200)  # Replace with your image path
 with col2:
     st.image("https://www.facebook.com/ValentinesDayImagess/", caption="And this is my queen!", width=200)  # Replace with girlfriend's image
 with col3:
