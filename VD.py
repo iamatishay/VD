@@ -1,18 +1,4 @@
-Ahhhh correct 😄🔥
-That version became too romantic and less fun.
 
-Now I’ll give you a proper balanced version:
-
-✅ English + Hindi mix
-✅ Multiple proper games
-✅ Interactive scoring
-✅ Romantic but playful
-✅ Background music included
-✅ Clean and working
-
-💖 FULL VERSION WITH REAL GAMES 🎮
-
-Copy everything 👇
 
 import streamlit as st
 import random
