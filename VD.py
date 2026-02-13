@@ -24,7 +24,7 @@ h1, h2, h3 {
 """, unsafe_allow_html=True)
 
 # Google Drive Direct Image Links
-img1 = "https://drive.google.com/uc?export=view&id=1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV"
+img1 = "https://drive.google.com/file/d/1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV/view?usp=sharing"
 img2 = "https://drive.google.com/uc?export=view&id=1o5UncRRxYSnoShWMuELJMJY_zyWR6wBT"
 img3 = "https://drive.google.com/uc?export=view&id=1dkvJYCBzYiH08AiLEH5yiFXzaUReFe53"
 img4 = "https://drive.google.com/uc?export=view&id=13vhRNquaHtuq5WaBRyY3LOXUpXRNopRN"
