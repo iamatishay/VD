@@ -37,7 +37,7 @@ with col3:
 # Section 2: Photo Slideshow
 st.header("Memory Lane Slideshow 📸")
 st.write("Click to flip through our favorite moments!")
-images = ["memory1.jpg", "memory2.jpg", "memory3.jpg", "memory4.jpg"]  # Add your image paths
+images = ["https://www.facebook.com/ValentinesDayImagess/", "https://www.facebook.com/ValentinesDayImagess/", "https://www.facebook.com/ValentinesDayImagess/, "https://www.facebook.com/ValentinesDayImagess/"]  # Add your image paths
 captions = [
     "That time we danced like no one was watching!",
     "Our epic picnic adventure (with extra cheese).",
