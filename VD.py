@@ -1,23 +1,38 @@
+Ahhhh correct 😄🔥
+That version became too romantic and less fun.
+
+Now I’ll give you a proper balanced version:
+
+✅ English + Hindi mix
+✅ Multiple proper games
+✅ Interactive scoring
+✅ Romantic but playful
+✅ Background music included
+✅ Clean and working
+
+💖 FULL VERSION WITH REAL GAMES 🎮
+
+Copy everything 👇
+
 import streamlit as st
 import random
 
 # ---------------------------------------------------
 # PAGE CONFIG
 # ---------------------------------------------------
-st.set_page_config(page_title="My Forever Love 💖", page_icon="🌹", layout="wide")
+st.set_page_config(page_title="Our Love Game Zone 💖", page_icon="🌹", layout="wide")
 
 # ---------------------------------------------------
-# BACKGROUND MUSIC (Instrumental - No Voice)
-# Replace the mp3 link with any romantic instrumental mp3 URL
+# BACKGROUND MUSIC (Instrumental)
 # ---------------------------------------------------
 st.markdown("""
 <audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=romantic-background-112191.mp3" type="audio/mp3">
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3" type="audio/mp3">
 </audio>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# CUSTOM CSS
+# CSS STYLE
 # ---------------------------------------------------
 st.markdown("""
 <style>
@@ -28,155 +43,129 @@ body {
     background-color: #c2185b;
     color: white;
     border-radius: 10px;
-    height: 3em;
-    width: 100%;
     font-weight: bold;
 }
 h1, h2, h3 {
-    color: #ad1457;
     text-align: center;
+    color: #ad1457;
 }
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# IMAGES
-# ---------------------------------------------------
-img1 = "https://drive.google.com/thumbnail?id=1EXBDxIo0M2XgeN6M9y0-GJ-jB4J-Rzlo&sz=w1000"
-img2 = "https://drive.google.com/thumbnail?id=1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV&sz=w1000"
-img3 = "https://drive.google.com/thumbnail?id=1Q8Y33KI3OPMBlsJ2x8a-g1Ws80b_ya_q&sz=w1000"
-
-# ---------------------------------------------------
 # TITLE
 # ---------------------------------------------------
-st.title("🌹 Our Beautiful Love Story 💖")
-st.subheader("You are not just part of my life, you are my life.")
+st.title("🌹 Welcome to Our Love Game Zone 💖")
+st.subheader("Romance + Fun + Thoda Sa Drama 😌")
 
 # ---------------------------------------------------
-# PHOTOS
+# GAME 1 – LOVE QUIZ (With Score)
 # ---------------------------------------------------
-st.header("Together, Always 💑")
+st.header("Game 1: How Well Do You Know Me? 🤔")
 
-col1, col2, col3 = st.columns(3)
+questions = {
+    "What is my favorite comfort food?": ["Pizza", "Ice Cream", "Chocolate", "All of them"],
+    "Who says sorry first?": ["Me", "You", "Depends", "No one 😅"],
+    "What do I love the most about you?": ["Your smile", "Your nature", "Your eyes", "Everything"]
+}
 
-with col1:
-    st.image(img1, caption="My Heart ❤️", use_column_width=True)
+answers = ["All of them", "Me", "Everything"]
 
-with col2:
-    st.image(img2, caption="My Happiness 💕", use_column_width=True)
+score = 0
+for i, (q, options) in enumerate(questions.items()):
+    selected = st.radio(q, options, key=f"quiz{i}")
+    if selected == answers[i]:
+        score += 1
 
-with col3:
-    st.image(img3, caption="Our Forever 💞", use_column_width=True)
-
-# ---------------------------------------------------
-# ROMANTIC SHAYARI (Balanced Hindi + English)
-# ---------------------------------------------------
-st.header("A Little Shayari For You 🌙")
-
-shayari_list = [
-    "You are the reason my mornings feel brighter. Tumhari muskaan meri duniya hai ❤️",
-    "In this big world, I found my home in you. Tum meri sukoon ho 💕",
-    "Even the moon feels shy when I see your beauty. Chaand bhi sharma jaaye 🌙",
-    "No matter what happens, I will always stand by you. Hamesha tumhare saath.",
-    "With you, every ordinary day feels special. Tum ho toh sab perfect hai 💖"
-]
-
-if st.button("Click for a Shayari 💌"):
-    st.success(random.choice(shayari_list))
+if st.button("Check Quiz Score 💕"):
+    st.success(f"You scored {score}/{len(questions)} ❤️")
+    if score == len(questions):
+        st.balloons()
+        st.success("Perfect! You truly know me inside out 😘")
 
 # ---------------------------------------------------
-# FUN RAPID FIRE
+# GAME 2 – LOVE COMPATIBILITY
 # ---------------------------------------------------
-st.header("Fun Rapid Fire 🔥")
+st.header("Game 2: Love Compatibility 💘")
 
-rapid_questions = [
-    "Who gets more dramatic during fights? 😜",
-    "Who says 'I love you' first? ❤️",
-    "Who eats more food? 🍕",
-    "Who is more possessive? 👀",
-    "Who is more romantic? 🌹"
-]
+name1 = st.text_input("Your Name")
+name2 = st.text_input("My Name")
 
-if st.button("Start Rapid Fire 💥"):
-    for q in rapid_questions:
-        st.write("👉", q)
-
-# ---------------------------------------------------
-# LOVE COMPATIBILITY
-# ---------------------------------------------------
-st.header("Love Compatibility 💘")
-
-name1 = st.text_input("Your Name 💖")
-name2 = st.text_input("My Name 💕")
-
-if st.button("Check Love Percentage 💞"):
+if st.button("Calculate Love % 💞"):
     if name1 and name2:
-        score = random.randint(88, 100)
-        st.success(f"{name1} ❤️ {name2} = {score}% Soulmate Energy ✨")
+        percentage = random.randint(85, 100)
+        st.success(f"{name1} ❤️ {name2} = {percentage}% Perfect Match ✨")
     else:
-        st.warning("Please enter both names 😊")
+        st.warning("Enter both names jaan 😄")
 
 # ---------------------------------------------------
-# TRUTH OR DARE
+# GAME 3 – TRUTH OR DARE
 # ---------------------------------------------------
-st.header("Truth or Dare – Romantic Edition 🎲")
+st.header("Game 3: Truth or Dare 🎲")
 
 truths = [
-    "What was your first impression of me? 😌",
-    "When did you realize you love me? 💖",
-    "What is your favorite memory of us?"
+    "When did you first fall for me? 💖",
+    "What is your favorite memory of us?",
+    "What makes you jealous? 😜"
 ]
 
 dares = [
-    "Send me a sweet message right now 💌",
-    "Say 'I love you' in your cutest voice 😍",
+    "Send me a cute selfie right now 😍",
+    "Say I love you 5 times ❤️",
     "Give me a new romantic nickname 💕"
 ]
 
 choice = st.radio("Choose one:", ["Truth 🤍", "Dare 💋"])
 
-if st.button("Play Now 🎉"):
+if st.button("Play Truth/Dare 🎉"):
     if choice == "Truth 🤍":
         st.info(random.choice(truths))
     else:
         st.warning(random.choice(dares))
 
 # ---------------------------------------------------
-# SPIN THE LOVE WHEEL
+# GAME 4 – SPIN THE LOVE WHEEL
 # ---------------------------------------------------
-st.header("Spin the Love Wheel 🎡")
+st.header("Game 4: Spin the Love Wheel 🎡")
 
-wheel = [
-    "One warm hug 🤗",
-    "Movie night together 🎬",
-    "Ice cream date 🍦",
-    "Long drive under the stars 🚗✨",
-    "Ten compliments in a row 😍"
+wheel_options = [
+    "1 Warm Hug 🤗",
+    "Movie Night Together 🎬",
+    "Ice Cream Date 🍦",
+    "Long Drive Under Stars 🚗✨",
+    "10 Sweet Compliments 😍"
 ]
 
 if st.button("Spin Now 💫"):
-    st.success(f"Tonight's Plan: {random.choice(wheel)}")
+    result = random.choice(wheel_options)
+    st.success(f"Wheel Says: {result}")
+
+# ---------------------------------------------------
+# GAME 5 – WHO IS MORE?
+# ---------------------------------------------------
+st.header("Game 5: Who Is More? 😏")
+
+who_questions = [
+    "Who is more dramatic? 🎭",
+    "Who is more romantic? 🌹",
+    "Who gets angry faster? 😅",
+    "Who loves more? ❤️"
+]
+
+for i, q in enumerate(who_questions):
+    st.radio(q, ["Me 😎", "You 😘", "Both 💕"], key=f"who{i}")
 
 # ---------------------------------------------------
 # SECRET MESSAGE
 # ---------------------------------------------------
-st.header("Secret Message 🔐")
+st.header("Secret Love Code 🔐")
 
-code = st.text_input("Enter our secret word 💌")
+secret = st.text_input("Enter our secret word")
 
-if code.lower() == "forever":
-    st.success("No matter what, you and I — forever. Hamesha. ❤️")
-elif code != "":
-    st.error("Oops! Try again 😌")
-
-# ---------------------------------------------------
-# SPECIAL SURPRISE
-# ---------------------------------------------------
-st.header("Special Surprise 🎉")
-
-if st.button("Click Me ❤️"):
-    st.balloons()
-    st.success("With you, life feels magical. I am so lucky to have you 💖")
+if secret.lower() == "forever":
+    st.success("No matter what happens, you and I — forever. Hamesha ❤️")
+elif secret != "":
+    st.error("Wrong password 😜 Try again!")
 
 # ---------------------------------------------------
 # LOVE LETTER
