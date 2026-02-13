@@ -24,9 +24,9 @@ h1, h2, h3 {
 """, unsafe_allow_html=True)
 
 # Google Drive Direct Image Links
-img1 = "https://drive.google.com/thumbnail?id=1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV&sz=w1000"
-img2 = "https://drive.google.com/uc?export=view&id=1o5UncRRxYSnoShWMuELJMJY_zyWR6wBT"
-img3 = "https://drive.google.com/uc?export=view&id=1dkvJYCBzYiH08AiLEH5yiFXzaUReFe53"
+img1 = "https://drive.google.com/thumbnail?id=1EXBDxIo0M2XgeN6M9y0-GJ-jB4J-Rzlo&sz=w1000"
+img2 = "https://drive.google.com/thumbnail?id=1TUqRysE3J9CzZYmN1EYDvMcHb-4nIJxV&sz=w1000"
+img3 = "https://drive.google.com/thumbnail?id=1Q8Y33KI3OPMBlsJ2x8a-g1Ws80b_ya_q&sz=w1000"
 img4 = "https://drive.google.com/uc?export=view&id=13vhRNquaHtuq5WaBRyY3LOXUpXRNopRN"
 img5 = "https://drive.google.com/uc?export=view&id=1yumhZ2vu5dxg-Ec_Qdz6AMZ0iZywEiwm"
 img6 = "https://drive.google.com/uc?export=view&id=1YKptjhRLtMAmip5Nk5GNx4MjnbJ-Khl0"
